@@ -19,13 +19,11 @@ class _BottomWorldState extends State<BottomWorld> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          if (widget.bottom == Colors.blue) {
-            widget.callback(Colors.blue, Colors.pink);
-          } else {
-            widget.callback(Colors.pink, Colors.blue);
-          }
-        });
+        if (widget.bottom == Colors.blue) {
+          widget.callback(Colors.blue, Colors.pink);
+        } else {
+          widget.callback(Colors.pink, Colors.blue);
+        }
       },
       child: Container(
           height: 100.0,
