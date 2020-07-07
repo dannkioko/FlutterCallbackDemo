@@ -1,16 +1,16 @@
-# fluttercallbackdemo
+# Flutter CallBack Demo
 
-A new Flutter project.
+A Flutter project illustrating use of callbacks.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Callback functions can be used to send data from one method to another, one widget to another.
+Callbacks are passed a arguments to other functions.
 
-A few resources to get you started if this is your first Flutter project:
+In this app, a callback has been used to send data from a child widget to a parent widget.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## App Description
+The app has two container which swap colors between blue and pink when one is clicked.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+When the container is clicked, a callback function is called, that assigns colors to both containers, depending on
+current container color
