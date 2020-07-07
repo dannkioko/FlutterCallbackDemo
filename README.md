@@ -10,7 +10,10 @@ Callbacks are passed a arguments to other functions.
 In this app, a callback has been used to send data from a child widget to a parent widget.
 
 ## App Description
-The app has two container which swap colors between blue and pink when one is clicked.
+The app has two containers which swap colors, between blue and pink, when one is clicked.
 
 When the container is clicked, a callback function is called, that assigns colors to both containers, depending on
-current container color
+current container color.
+
+In the parent widget, where the callback is defined, it triggers a setState() method that re-renders the parent widget with the assigned colors.
+
