@@ -12,15 +12,14 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Color topColor = Colors.blue;
   Color bottomColor = Colors.pink;
-  @override
-  Widget build(BuildContext context) {
-    void callback(Color colorA, Color colorB) {
+  void callback(Color colorA, Color colorB) {
       setState(() {
         topColor = colorA;
         bottomColor = colorB;
       });
     }
-
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Trial App",

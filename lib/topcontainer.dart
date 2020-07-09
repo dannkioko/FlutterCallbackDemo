@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class HelloWorld extends StatefulWidget {
   final callback;
-  final Color top;
-  HelloWorld(this.top, this.callback);
+  final Color topColor;
+  HelloWorld(this.topColor, this.callback);
   @override
   _HelloWorldState createState() => _HelloWorldState();
 }
@@ -19,7 +19,7 @@ class _HelloWorldState extends State<HelloWorld> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (widget.top == Colors.blue) {
+        if (widget.topColor == Colors.blue) {
           widget.callback(Colors.pink, Colors.blue);
         } else {
           widget.callback(Colors.blue, Colors.pink);
@@ -27,7 +27,7 @@ class _HelloWorldState extends State<HelloWorld> {
       },
       child: Container(
         height: 100.0,
-        color: widget.top,
+        color: widget.topColor,
         child: Center(child: Text("Top Container")),
       ),
     );
