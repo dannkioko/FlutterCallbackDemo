@@ -10,14 +10,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Color topColor = Colors.blue;
-  Color bottomColor = Colors.pink;
-  void callback(Color colorA, Color colorB) {
-      setState(() {
-        topColor = colorA;
-        bottomColor = colorB;
-      });
-    }
+  Color noClickColor = Colors.blue;
+  Color clickColor = Colors.pink;
+  int container;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,8 +25,24 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Column(
             children: <Widget>[
-              HelloWorld(topColor, callback),
-              BottomWorld(bottomColor, callback),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      container = 0;
+                    });
+                  },
+                  child: container == 0
+                      ? TopContainer(clickColor)
+                      : TopContainer(noClickColor)),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      container = 1;
+                    });
+                  },
+                  child: container == 1
+                      ? BottomContainer(clickColor)
+                      : BottomContainer(noClickColor)),
             ],
           )),
     );
